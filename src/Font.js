@@ -54,6 +54,10 @@ export function isLoading(name: string): boolean {
   return loadPromises.hasOwnProperty(name);
 }
 
+export function addLoadedFont(name: string): void {
+    loaded[name] = true;
+}
+
 export async function loadAsync(
   nameOrMap: string | { [string]: FontSource } | Array<{ [string]: FontSource }>,
   uriOrModuleOrAsset?: FontSource
